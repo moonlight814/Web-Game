@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="app.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <title>Game</title>
 </head>
 
 <body>
 
-    <div>
-        <nav>
+
+    <h1 id="title">Wordle</h1>
+    <hr>
+    <br>
+    <!-- <nav>
 
             <label class="toggle">
                 <i class="fa fa-bars" ></i>
@@ -23,34 +27,23 @@
                 <li><a href="#">Statistics</a></li>
             </ul>
             <h1 id="title">Wordle</h1>
-        </nav>
-        <hr>
-        <br>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        </nav> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
         <script>
             $('.toggle i ').click(function() {
                 $('ul').toggleClass(`show`)
             })
-        </script>
+        </script> -->
+
+    <div id="container">
+
     </div>
-    <div class="container">
-        <div class="box1">
-            <img src="assets\box.png">
-        </div>
-        <div class="box2">
-            <img src="assets\box.png">
-        </div>
-        <div class="box3">
-            <img src="assets\box.png">
-        </div>
-        <div class="box4">
-            <img src="assets\box.png">
-        </div>
-        <div class="box5">
-            <img src="assets\box.png">
-        </div>
-    </div>
+    <br>
+    <h1 id="answer"></h1>
+
+
 </body>
 
 </html>

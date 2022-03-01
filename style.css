@@ -1,43 +1,84 @@
  body {
      background-color: white;
- }
- 
- h1 {
      text-align: center;
-     background-color: white;
-     font-size: 45px;
-     padding-bottom: .5em;
  }
  
- img {
+ #title {
+     font-size: 36px;
+     letter-spacing: 2px;
+     font-weight: bold;
+ }
+ /* img {
      width: 50%;
      height: 15%;
+ } */
+ 
+ br,
+ hr {
+     width: 500px;
  }
  
- .container {
+ #container {
      display: flex;
-     align-items: center;
-     width: 350;
+     /*keeps elements within container*/
+     width: 400px;
      height: 420px;
      background-color: lightsalmon;
+     margin: 0 auto;
+     margin-top: 3px;
+     flex-wrap: wrap;
+     
  }
  
- * {
+ .boxes {
+     border: 2px solid lightgray;
+     width: 71px;
+     height: 60px;
+     margin: 2.5px;
+     /*for the letter*/
+     color: black;
+     font-size:36px;
+     font-weight: bold;
+     display: flex;
+     /*center horizontally and vertically*/
+     justify-content: center;
+     align-items: center;
+    
+ }
+ /* * {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
  }
+  */
  
- .toggle {
+ .correct {
+     background-color: green;
+     color: white;
+     border-color: white;
+ }
+ 
+ .inWord {
+     background-color: #c9b435;
+     color: white;
+     border-color: white;
+ }
+ 
+ .wrong {
+     background-color: grey;
+     color: white;
+     border-color: white;
+ }
+ /*nav bar*/
+ /* .toggle {
      font-size: 30px;
      float: left;
      line-height: 45px;
      margin-left: 5%;
      cursor: pointer;
      display: none
- }
- 
- nav {
+ } */
+ /* nav {
      background-color: white;
      height: 45px;
      width: 100%;
@@ -94,4 +135,4 @@
      ul.show {
          top: 60px;
      }
- }
+ } */
