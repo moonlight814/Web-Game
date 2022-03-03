@@ -23,7 +23,7 @@
      /*keeps elements within container*/
      width: 400px;
      height: 420px;
-     background-color: lightsalmon;
+     background-color: white;
      margin: 0 auto;
      margin-top: 3px;
      flex-wrap: wrap;

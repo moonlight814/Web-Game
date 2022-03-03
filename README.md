@@ -22,7 +22,9 @@ To create a web-game in which the player has to guess a 4 letter word in 6 tries
 - The game should have a Readme.md file in the Github repository that describes the inspiration for the game, explains the controls and how to play the game, lists the technologies used to build the game, and addresses any outstanding bugs or unfinished functionality
 
 ## Functional Pieces
-- User needs to input an existing 4 letter word relating to (existing= in the dictionary)
+- User needs to input an existing 4 letter word relating to (existing= in the dictionary)  
+- TIMER!!!!!!!!!!!!!!!!!
+GIVE UP button
 - #### If a letter is guessed: 
 ** letters are always white
 
