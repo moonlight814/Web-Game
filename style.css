@@ -84,10 +84,14 @@
     align-items: center;
 }
   
-/* #score{
-    margin-left: 0;
+nav>img{
+    margin: auto;
+    position: absolute;
+    left:1em;;
+    width: 55px;
+    height: 55px;
     
-} */
+}
  
  .correct {
      background-color: green;
@@ -150,13 +154,13 @@
  ul li:hover {
      background-color: lightsalmon;
      color: white;
- }
+ }*/
  
- @media screen and (max-width: 1052px) {
+ /* @media screen and (max-width: 1052px) {
      .toggle {
          display: block;
      }
-     ul {
+     img {
          position: fixed;
          top: -400px;
          z-index: -1;
@@ -164,14 +168,13 @@
          right: 0;
          left: 0;
          width: 200px;
-         background-color: black;
          display: inline-block;
          transition: top .4s;
          margin-top: 0;
      }
-     ul.show {
+     img.show {
          top: 60px;
      }
- } */
- 
+ } 
+  */
  

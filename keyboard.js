@@ -2,8 +2,8 @@ function keyboardAppend() {
 
 let keyboard = [
     ["Q","W","E","R","T","Y","U","I","O","P"],
-    ["A","S","D","F","G","H","J","K","L", "␈"],
-    ["ENTER", "Z","X","C","V","B","N","M",""]
+    ["A","S","D","F","G","H","J","K","L"],
+    ["ENTER", "Z","X","C","V","B","N","M", "␈"]
 ]
 
 for( let x=0; x<keyboard.length; x++){
@@ -17,18 +17,18 @@ for( let x=0; x<keyboard.length; x++){
       let keyBox= document.createElement("div")
       
       let key= currentRow[i];
-      console.log(key)
+    //   console.log(key)
       keyBox.innerText = key;
       if (key == "ENTER"){
           keyBox.id= "Enter";
       }else if (key == "␈"){
           keyBox.id= "Backspace"
           
-      }else if ("A" <= key && key <= "Z"){
+      }else {
           keyBox.id= "Key"+ key
-          console.log(keyBox)
+          console.log(keyBox.id)
       }
-          
+         
       keyBox.addEventListener("click", processKey);
      
       if (key == "ENTER" ){
@@ -46,7 +46,7 @@ for( let x=0; x<keyboard.length; x++){
 
 // event for id
 function processKey(){
-    let e= {"code" :this.id}
+    let e= {"code" :this.id};
     inputKey(e)
 }
 
@@ -55,8 +55,8 @@ function processKey(){
 function inputKey(e){
     if (gameOver)return;
     
+  
     
-    // alert(e.key);
     
     //check to see which key was pressed by user
     
@@ -71,7 +71,10 @@ function inputKey(e){
                 col += 1;
             }
         }
+        
     }
+    
+    
     
     else if (e.code === 'Backspace'){
         if ( 0 < col && col <= width){
@@ -89,7 +92,7 @@ function inputKey(e){
         row+= 1; //new row when enter is pressed
         col = 0 //start at column 0 again
         }else {
-            alert("Not enough letters!")  ////ADD animation for temporary textbox saying this instead of an alertnh
+            alert("Not enough letters!")  ////ADD animation for temporary textbox saying this instead of an alert??
         }
     }
     
