@@ -45,12 +45,49 @@
      align-items: center;
     
  }
- /* * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
-  */
+ 
+  /*keyboard */
+.keyboard-hr{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.keyboard-box{
+    border: 1px solid lightgray;
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    /*for the letter*/
+    
+    font-size:20px;
+    font-weight: bold;
+    display: flex;
+    /*center horizontally and vertically*/
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard-enter{
+    border: 1px solid lightgray;
+    width: 75px;
+    height: 40px;
+    margin: 1px;
+    /*for the letter*/
+    
+    font-size:15px;
+    font-weight: bold;
+    display: flex;
+    /*center horizontally and vertically*/
+    justify-content: center;
+    align-items: center;
+}
+  
+/* #score{
+    margin-left: 0;
+    
+} */
  
  .correct {
      background-color: green;
@@ -136,3 +173,5 @@
          top: 60px;
      }
  } */
+ 
+ 

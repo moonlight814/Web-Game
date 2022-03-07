@@ -5,7 +5,10 @@ var row = 0; //current guess (attempt #)
 var col = 0; //current letter for that attempt
 
 var gameOver = false;
-var word = 'MOUSE';
+
+
+var word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+console.log(word);
 
 //when page loads call this function
 window.onload = function() {
@@ -23,8 +26,11 @@ function initialize () {
             tile.classList.add("boxes");
             tile.innerText= "";
             document.getElementById("container").appendChild(tile);
+            
         }
+        
     }
+    keyboardAppend()
 }
 
 
@@ -33,12 +39,16 @@ function initialize () {
 //update function
 
 function enter(){
+    let guess = "";
+    document.getElementById('answer').innetText ="";
+    
+    
     let correct= 0;
     for (let c =0; c< width; c++){
         let currentBox= document.getElementById(row.toString() + '-' + c.toString())
         let letter= currentBox.innerText
         
-        //correct position?
+        //correct position? make sure to add if the letters are repeated 
         if (word[c] == letter){
             currentBox.classList.add("correct");
             correct += 1;
@@ -96,12 +106,12 @@ document.addEventListener("keyup", (e)=> { //e = key event
         row+= 1; //new row when enter is pressed
         col = 0 //start at column 0 again
         }else {
-            alert("Not enough letters!")  ////ADD animation for temporary textbox saying this instead of an alert
+            alert("Not enough letters!")  ////ADD animation for temporary textbox saying this instead of an alertnh
         }
     }
     
     if (row == height){
         gameOver= true;
-        document.getElementById('answer').innerText= word;
+        document.getElementById('answer').innerText= word
     }
 })
