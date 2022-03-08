@@ -7,6 +7,10 @@ var col = 0; //current letter for that attempt
 var gameOver = false;
 
 
+let scoreCounter= document.getElementById('scoreCounter')
+var score= 0;
+
+
 var word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
 console.log(word);
 
@@ -30,7 +34,7 @@ function initialize () {
         }
         
     }
-    keyboardAppend()
+    keyboardAppend() //located in the keyboard.js file
 }
 
 
@@ -39,16 +43,20 @@ function initialize () {
 //update function
 
 function enter(){
-    let guess = "";
-    document.getElementById('answer').innetText ="";
+    // let guess = "";
+    // document.getElementById('answer').innetText ="";
     
     
-    let correct= 0;
+    let correct= 0; // number of letters user gets correct
+    
+    //iterate through letters of the word that the user guessed
+    
     for (let c =0; c< width; c++){
         let currentBox= document.getElementById(row.toString() + '-' + c.toString())
+        
         let letter= currentBox.innerText
         
-        //correct position? make sure to add if the letters are repeated 
+        //correct position? 
         if (word[c] == letter){
             currentBox.classList.add("correct");
             correct += 1;
@@ -56,11 +64,16 @@ function enter(){
         else if (word.includes(letter)){
             currentBox.classList.add("inWord")
         }
+        //wrong position
         else {
             currentBox.classList.add("wrong")}
             
+            //updating gameOver (did the person guess the word correctly before the 6 tries?)
             if (correct == width){
                 gameOver = true;
+                console.log('win')
+                updateScore();
+                
             }
         
     }
@@ -115,3 +128,14 @@ document.addEventListener("keyup", (e)=> { //e = key event
         document.getElementById('answer').innerText= word
     }
 })
+
+
+//update score function
+
+function updateScore(){
+    scoreCounter +=1;
+    score= scoreCounter
+    document.getElementById('scoreCounter').innerText = score
+    console.log('plus 1')
+    console.log(score)
+}

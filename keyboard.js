@@ -26,7 +26,7 @@ for( let x=0; x<keyboard.length; x++){
           
       }else {
           keyBox.id= "Key"+ key
-          console.log(keyBox.id)
+        //   console.log(keyBox.id)
       }
          
       keyBox.addEventListener("click", processKey);
