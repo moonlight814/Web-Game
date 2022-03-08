@@ -48,9 +48,20 @@ function enter(){
     
     
     let correct= 0; // number of letters user gets correct
+    let letterC={};//keeping track of number of times each letter appears in the word
+    
+    for(let i=0; i< word.length;i++){
+        let letter= word[i]
+        if (letterC[letter]){
+            letterC[letter]+=1
+        }else {
+            letterC[letter]=1;
+        }
+    }
     
     //iterate through letters of the word that the user guessed
     
+    //first iteration, checking for correct position
     for (let c =0; c< width; c++){
         let currentBox= document.getElementById(row.toString() + '-' + c.toString())
         
@@ -59,23 +70,52 @@ function enter(){
         //correct position? 
         if (word[c] == letter){
             currentBox.classList.add("correct");
+            
+            
+            let keyBox= document.getElementById("Key"+letter)
+            keyBox.classList.remove('inWord')
+            keyBox.classList.add('correct')
             correct += 1;
-        } //in word but incorrect position?
-        else if (word.includes(letter)){
-            currentBox.classList.add("inWord")
-        }
-        //wrong position
-        else {
-            currentBox.classList.add("wrong")}
+            letterC[letter]-=1
+        } 
+        
             
             //updating gameOver (did the person guess the word correctly before the 6 tries?)
             if (correct == width){
                 gameOver = true;
                 console.log('win')
                 updateScore();
+                alert('You won!')
                 
             }
         
+    }
+    
+    
+    //iterating again but for present but not correct spot
+    for (let c =0; c< width; c++){
+        let currentBox= document.getElementById(row.toString() + '-' + c.toString())
+        
+        let letter= currentBox.innerText
+        
+        //correct position? 
+         if(!currentBox.classList.contains("correct"))   {
+            if (word.includes(letter) && letterC[letter] > 0){
+                currentBox.classList.add("inWord")
+                let keyBox= document.getElementById("Key"+letter)
+                keyBox.classList.remove('inWord')
+                // to not add the inWord style class if it already has a correct style class
+                if (!keyBox.classList.contains('correct')){
+                keyBox.classList.add('inWord')
+                }
+                letterC[letter]
+            }
+            //wrong position
+            else{
+                currentBox.classList.add("wrong")
+            }
+        }
+           
     }
 }
 
@@ -126,6 +166,7 @@ document.addEventListener("keyup", (e)=> { //e = key event
     if (row == height){
         gameOver= true;
         document.getElementById('answer').innerText= word
+        alert("You lost!")
     }
 })
 

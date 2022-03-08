@@ -2,7 +2,7 @@ function keyboardAppend() {
 
 let keyboard = [
     ["Q","W","E","R","T","Y","U","I","O","P"],
-    ["A","S","D","F","G","H","J","K","L"],
+    ["A","S","D","F","G","H","J","K","L",""],
     ["ENTER", "Z","X","C","V","B","N","M", "␈"]
 ]
 
@@ -25,7 +25,7 @@ for( let x=0; x<keyboard.length; x++){
           keyBox.id= "Backspace"
           
       }else {
-          keyBox.id= "Key"+ key
+          keyBox.id= "Key"+key
         //   console.log(keyBox.id)
       }
          
@@ -48,11 +48,14 @@ for( let x=0; x<keyboard.length; x++){
 function processKey(){
     let e= {"code" :this.id};
     inputKey(e)
+    console.log(e)
+    // console.log(inputKey(e))
 }
 
 
 
 function inputKey(e){
+    // console.log(e)
     if (gameOver)return;
     
   
@@ -66,8 +69,8 @@ function inputKey(e){
            
             console.log(currentBox)
             if(currentBox.innerText == ``) {
-                currentBox.innerText= e.key
-                
+                currentBox.innerText= "Key"+e.key
+                console.log(e.key)
                 col += 1;
             }
         }
@@ -91,7 +94,7 @@ function inputKey(e){
         enter()
         row+= 1; //new row when enter is pressed
         col = 0 //start at column 0 again
-        }else {
+        }else if ("KeyA"<= e.code && e.code <= "KeyZ"){
             alert("Not enough letters!")  ////ADD animation for temporary textbox saying this instead of an alert??
         }
     }
