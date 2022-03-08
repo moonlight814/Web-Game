@@ -50,6 +50,7 @@ function enter(){
     let correct= 0; // number of letters user gets correct
     let letterC={};//keeping track of number of times each letter appears in the word
     
+    //itetaring through number of letters
     for(let i=0; i< word.length;i++){
         let letter= word[i]
         if (letterC[letter]){
@@ -72,7 +73,7 @@ function enter(){
             currentBox.classList.add("correct");
             
             
-            let keyBox= document.getElementById("Key"+letter)
+            let keyBox= document.getElementById("Key"+letter)//it will match any instance where "Key(letter)"is, including keyboard 
             keyBox.classList.remove('inWord')
             keyBox.classList.add('correct')
             correct += 1;

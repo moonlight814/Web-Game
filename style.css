@@ -1,5 +1,9 @@
- body {
-     background-color: white;
+/* background {
+    background-image: linear-gradient(red, yellow);
+  } */
+
+body {
+    background-color: rgb(61, 61, 61);
      text-align: center;
  }
  
@@ -7,6 +11,7 @@
      font-size: 36px;
      letter-spacing: 2px;
      font-weight: bold;
+     color:white
  }
  /* img {
      width: 50%;
@@ -22,6 +27,8 @@
  button{
      margin-top:8px;
      margin-bottom:10px;
+     background-color: #1E555C;
+     color:white
  }
  
  #container {
@@ -29,7 +36,7 @@
      /*keeps elements within container*/
      width: 400px;
      height: 420px;
-     background-color: white;
+     background-image: linear-gradient(#5C2751);
      margin: 0 auto;
      margin-top: 3px;
      flex-wrap: wrap;
@@ -37,12 +44,12 @@
  }
  
  .boxes {
-     border: 2px solid lightgray;
+     border: 2px solid black;
      width: 71px;
      height: 60px;
      margin: 2.5px;
      /*for the letter*/
-     color: black;
+     color:white;
      font-size:36px;
      font-weight: bold;
      display: flex;
@@ -61,7 +68,7 @@
 }
   
 .keyboard-box{
-    border: 1px solid lightgray;
+    border: 1px solid black;
     width: 36px;
     height: 40px;
     margin: 1px;
@@ -73,15 +80,16 @@
     /*center horizontally and vertically*/
     justify-content: center;
     align-items: center;
+    color:white
 }
 
 .keyboard-enter{
-    border: 1px solid lightgray;
+    border: 1px solid black;
     width: 75px;
     height: 40px;
     margin: 1px;
     /*for the letter*/
-    
+    color:white;
     font-size:15px;
     font-weight: bold;
     display: flex;
@@ -89,6 +97,8 @@
     justify-content: center;
     align-items: center;
 }
+
+
   
 /* nav>img{
     margin: auto;
@@ -103,6 +113,7 @@
 
 h2{
     margin:auto;
+    color:white;d
 }
 
  
