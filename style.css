@@ -16,6 +16,12 @@
  br,
  hr {
      width: 500px;
+     margin:auto;
+ }
+ 
+ button{
+     margin-top:8px;
+     margin-bottom:10px;
  }
  
  #container {
@@ -84,14 +90,21 @@
     align-items: center;
 }
   
-nav>img{
+/* nav>img{
     margin: auto;
     position: absolute;
     left:1em;;
     width: 55px;
     height: 55px;
     
+} */
+
+
+
+h2{
+    margin:auto;
 }
+
  
  .correct {
      background-color: green;
